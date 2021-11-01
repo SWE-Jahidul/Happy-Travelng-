@@ -5,6 +5,9 @@ import Contact from "./Components/Contact/Contact";
 import Events from "./Components/Events/Events";
 import Home from "./Components/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
+import Blogs from "./Components/Blogs/Blogs";
+import Login from "./Components/Login/Login";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
             <About></About>
           </Route>
 
+          <Route path="/blogs">
+            <Blogs></Blogs>
+          </Route>
           <Route path="/events">
             <Events></Events>
           </Route>
@@ -31,7 +37,13 @@ function App() {
           <Route path="/contact">
             <Contact></Contact>
           </Route>
+
+          <Route path="/login">
+            <Login></Login>
+          </Route>
         </Switch>
+
+        <Footer></Footer>
       </Router>
     </div>
   );

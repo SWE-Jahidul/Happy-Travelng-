@@ -1,0 +1,58 @@
+.sign-in{
+    background-color: white;
+    height: 300px;
+    
+}
+
+.fb{
+    width: 48% ;
+    background-color: #007d9e;
+    font-weight: 500;
+    color: white;
+    border: 0;
+    padding: 10px;
+    border-radius: 50px 50px;
+
+}
+
+
+.gmail{
+    width: 48% ;
+    background-color: #007d9e;
+    font-weight: 500;
+    color: white;
+    border: 0;
+    padding: 10px;
+    border-radius: 50px 50px;
+
+}
+
+
+.btn{
+    width: 100% ;
+    background-color: #007d9e;
+    font-weight: 500;
+    color: white;
+    border: 0;
+    padding: 10px;
+    border-radius: 50px 50px;
+
+}
+
+.reg
+{
+    width: 100% ;
+    font-weight: 500;
+    color: black; 
+    border: 0; 
+    padding: 10px;
+    border-radius: 50px 50px;
+
+
+}
+.reg
+.gmail:hover{
+    background-color:  #007d9e;
+    color: white; 
+
+}

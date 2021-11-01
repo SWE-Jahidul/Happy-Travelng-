@@ -3,7 +3,10 @@ import React from 'react';
 const Events = () => {
     return (
         <div>
-            i am Events s
+           <h1>
+           Upcoming Events
+           </h1>
+
         </div>
     );
 };
