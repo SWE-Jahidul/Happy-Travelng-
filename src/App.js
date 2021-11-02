@@ -8,6 +8,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Blogs from "./Components/Blogs/Blogs";
 import Login from "./Components/Login/Login";
 import Footer from "./Components/Footer/Footer";
+import AddEvents from "./Components/AddEvents/AddEvents";
 
 function App() {
   return (
@@ -37,6 +38,12 @@ function App() {
           <Route path="/contact">
             <Contact></Contact>
           </Route>
+
+
+          <Route path="/addevents">
+            <AddEvents></AddEvents>
+          </Route>
+
 
           <Route path="/login">
             <Login></Login>
