@@ -9,6 +9,7 @@ import Blogs from "./Components/Blogs/Blogs";
 import Login from "./Components/Login/Login";
 import Footer from "./Components/Footer/Footer";
 import AddEvents from "./Components/AddEvents/AddEvents";
+import PopularDestinationDetails from "./Components/PopularDestiantionDetails/PopularDestinationDetails";
 
 function App() {
   return (
@@ -39,11 +40,13 @@ function App() {
             <Contact></Contact>
           </Route>
 
-
           <Route path="/addevents">
             <AddEvents></AddEvents>
           </Route>
 
+          <Route path="/populardestinationdetails/:destinationId">
+            <PopularDestinationDetails></PopularDestinationDetails>
+          </Route>
 
           <Route path="/login">
             <Login></Login>

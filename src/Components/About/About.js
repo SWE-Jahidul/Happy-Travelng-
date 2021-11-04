@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="container my-3">
 
-        <h3 className="my-5">  About Us</h3>
+        <h2 className="my-5">  About Us</h2>
       <div className="row d-flex align-items-center">
 
         <div className="col-lg-6">
