@@ -6,10 +6,10 @@ const Footer = () => {
     <footer className="footer ">
       <section className="container ">
         <div className="row pt-5">
-          <div className="col-lg-3">
+          <div className="col-lg-3 con1">
             <h5> Happy Travling </h5>
             <hr
-              className="w-25 mx-auto"
+              className="w-25 "
               style={{
                 height: 4,
                 color: "white",
@@ -21,25 +21,26 @@ const Footer = () => {
               midst dominion creepeth morning laboris nisi ufsit aliquip.
             </p>
           </div>
-          <div className="col-lg-3 ">
-            <h5> NEXT COURSES </h5>
+          <div className="col-lg-3 con1">
+            <h5> Popular Destination </h5>
             <hr
-              className="w-25 mx-auto"
+              className="w-25"
               style={{
                 height: 4,
                 color: "white",
               }}
             />
 
-            <p> Flutter </p>
-            <p> Dart </p>
-            <p> SQL </p>
-            <p> Oracle </p>
+            <p>Switzerland</p>
+
+            <p> Indonesia </p>
+            <p> America </p>
+            <p>India</p>
           </div>
-          <div className="col-lg-3 ">
+          <div className="col-lg-3 con1">
             <h5> ABPUT LEARN </h5>
             <hr
-              className="w-25 mx-auto"
+              className="w-25"
               style={{
                 height: 4,
                 color: "white",
@@ -51,10 +52,10 @@ const Footer = () => {
             <p> Tearms & Condition </p>
             <p> Register</p>
           </div>
-          <div className="col-lg-3 ">
+          <div className="col-lg-3 con1 ">
             <h5> Contact Us</h5>
             <hr
-              className="w-25 mx-auto"
+              className="w-25"
               style={{
                 height: 4,
                 color: "white",
