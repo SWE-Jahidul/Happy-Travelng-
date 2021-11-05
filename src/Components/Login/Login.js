@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./login.css";
+import { getAuth,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import initilizeauthentication from "../Firebase/firebase.initialize";
+
+initilizeauthentication();
+
+const provider = new GoogleAuthProvider();
 
 const Login = () => {
+const [user , setUser] = useState({})
+const handelGoogleSignIn =() =>{
+  const auth = getAuth();
+  signInWithPopup(auth,provider)
+  .then(result => {
+    const{ displayName, email, photoURL } = result.user;
+    const logedUser = {
+      name: displayName,
+      email: email,
+      photo: photoURL
+    };
+    setUser(logedUser)
+  })
 
+  .catch(error => {
 
+  })
+}
 
   return (
     <div className="d-flex justify-content-center ">
@@ -15,11 +37,15 @@ const Login = () => {
           <button
             type="button"
             class="gmail  my-2  "
+            onClick={handelGoogleSignIn}
           >
             Gmail
           </button>
         </div>
       </div>
+
+
+      {user.name }
     </div>
   );
 };

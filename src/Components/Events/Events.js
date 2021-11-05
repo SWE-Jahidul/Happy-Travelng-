@@ -30,7 +30,9 @@ const Events = () => {
         <div className="row">
           {events?.map((pd) => (
             <div className="col-md-4 col-lg-4 col-12 py-4">
-              <div className="user border pb-3 m-2">
+              <div className="user border pb-3 m-2"  style={{
+              height:450
+            }}>
                 <img className="img-fluid" src={pd.thabnil} />
                 <div className="row d-flex justify-content-around align-items-cente pt-3">
                   <div className="col">

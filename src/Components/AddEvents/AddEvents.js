@@ -44,7 +44,7 @@ const AddEvents = () => {
     <div>
       <div>
         <div className="d-flex justify-content-center ">
-          <div className="events-card shadow-lg my-5 px-5">
+          <div className="events-card shadow-lg my-5 px-5" style={{ height:600}}>
             <h3 className="py-3"> Add New Events </h3>
 
             <div className="form-group my-4">
@@ -107,7 +107,7 @@ const AddEvents = () => {
               />
             </div>
 
-            <button onClick={handelevent} className="btn btn-sucess my-3">
+            <button onClick={handelevent} className="btn btn-sucess">
               {" "}
               AddEvents{" "}
             </button>
