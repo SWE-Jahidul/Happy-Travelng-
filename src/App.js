@@ -10,6 +10,7 @@ import Login from "./Components/Login/Login";
 import Footer from "./Components/Footer/Footer";
 import AddEvents from "./Components/AddEvents/AddEvents";
 import PopularDestinationDetails from "./Components/PopularDestiantionDetails/PopularDestinationDetails";
+import EventsDetails from "./Components/EventsDetails/EventsDetails";
 
 function App() {
   return (
@@ -46,6 +47,10 @@ function App() {
 
           <Route path="/populardestinationdetails/:destinationId">
             <PopularDestinationDetails></PopularDestinationDetails>
+          </Route>
+
+          <Route path="/eventdetails/:eventId">
+            <EventsDetails></EventsDetails>
           </Route>
 
           <Route path="/login">

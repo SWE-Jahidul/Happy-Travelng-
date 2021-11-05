@@ -22,7 +22,6 @@ const About = () => {
         </div>
         <div className="col-lg-6">
           <h1>Get ready for real time adventure</h1>
-
           <p>
             Let’s start your journey with us, your dream will come true. Lorem
             ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

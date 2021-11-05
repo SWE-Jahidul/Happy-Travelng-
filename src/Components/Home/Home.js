@@ -1,5 +1,6 @@
 import React from "react";
 import About from "../About/About";
+import Events from "../Events/Events";
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
 import PopularDestinations from "../PopularDestinations/PopularDestinations";
 import Vedio from "../Vedio/Vedio";
@@ -10,7 +11,9 @@ const Home = () => {
     <div>
       <HeaderBanner></HeaderBanner>
       <About></About>
-      <PopularDestinations></PopularDestinations>
+    
+    <Events> </Events>
+      {/* <PopularDestinations></PopularDestinations> */}
       <WhyChoseus></WhyChoseus>
 
       <Vedio></Vedio>
