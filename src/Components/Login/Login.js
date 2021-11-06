@@ -1,33 +1,20 @@
 import React, { useState } from "react";
 
 import "./login.css";
-import { getAuth,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import initilizeauthentication from "../Firebase/firebase.initialize";
 
+
+
+import initilizeauthentication from "../Firebase/firebase.initialize";
+import { getAuth } from "@firebase/auth";
+import useAuth from "../Hooks/useAuth";
 initilizeauthentication();
 
-const provider = new GoogleAuthProvider();
 
 const Login = () => {
-const [user , setUser] = useState({})
-const handelGoogleSignIn =() =>{
   const auth = getAuth();
-  signInWithPopup(auth,provider)
-  .then(result => {
-    const{ displayName, email, photoURL } = result.user;
-    const logedUser = {
-      name: displayName,
-      email: email,
-      photo: photoURL
-    };
-    setUser(logedUser)
-  })
 
-  .catch(error => {
-
-  })
-}
-
+  const { signinUsingGoogle } = useAuth();
+console.log(signinUsingGoogle);
   return (
     <div className="d-flex justify-content-center ">
       <div className="sign-in shadow-lg my-5  px-5">
@@ -37,7 +24,7 @@ const handelGoogleSignIn =() =>{
           <button
             type="button"
             class="gmail  my-2  "
-            onClick={handelGoogleSignIn}
+            onClick={signinUsingGoogle}
           >
             Gmail
           </button>
@@ -45,7 +32,7 @@ const handelGoogleSignIn =() =>{
       </div>
 
 
-      {user.name }
+      {/* {user.name } */}
     </div>
   );
 };

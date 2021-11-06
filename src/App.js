@@ -11,10 +11,14 @@ import Footer from "./Components/Footer/Footer";
 import AddEvents from "./Components/AddEvents/AddEvents";
 import PopularDestinationDetails from "./Components/PopularDestiantionDetails/PopularDestinationDetails";
 import EventsDetails from "./Components/EventsDetails/EventsDetails";
+import AuthProvider from "./Components/context/AuthProvider";
+import ManageOrder from "./Components/ManageOrder/ManageOrder";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
         <Navbar> </Navbar>
         <Switch>
@@ -49,8 +53,12 @@ function App() {
             <PopularDestinationDetails></PopularDestinationDetails>
           </Route>
 
-          <Route path="/eventdetails/:eventId">
+          <PrivateRoute path="/eventdetails/:eventId">
             <EventsDetails></EventsDetails>
+          </PrivateRoute>
+
+          <Route path="/manageorder">
+            <ManageOrder></ManageOrder>
           </Route>
 
           <Route path="/login">
@@ -60,6 +68,7 @@ function App() {
 
         <Footer></Footer>
       </Router>
+      </AuthProvider>
     </div>
   );
 }
