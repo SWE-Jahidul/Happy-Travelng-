@@ -15,20 +15,24 @@ const PopularDestinationDetails = () => {
   ] = useState();
 
   useEffect(() => {
-    fetch("../populardes.json")
+    fetch("http://localhost:5000/popularDestinationusers")
       .then((res) => res.json())
       .then((data) => {
-        console.log("my data", data);
+        console.log("my details data", data);
         setPopularDestinationDetails(data);
       });
   }, []);
 
+
   useEffect(() => {
-    let mydes = populardestinationdetails.filter(
-      (des) => des.id == destinationId
-    );
-    setCurrentpopulardestinationdetails(mydes[0]);
-    console.log(mydes);
+    if(populardestinationdetails.length >0 ){
+      const mydes = populardestinationdetails.find(
+        (des) => des._id == destinationId
+      );
+      setCurrentpopulardestinationdetails(mydes);
+      console.log("ttttttttttt",mydes);
+    }
+    
   }, [populardestinationdetails]);
 
   return (
@@ -42,18 +46,18 @@ const PopularDestinationDetails = () => {
                 <div className="col-lg-6 col-md-6 col-12">
                   <img
                     className="card-img-top"
-                    src={currentpopulardestinationdetails.image}
+                    src={currentpopulardestinationdetails?.thabnil}
                     style={{}}
                     alt="Card image cap"
                   />
                   <h5 className="text-dark pt-2">
-                    {currentpopulardestinationdetails.countryName}{" "}
+                    {currentpopulardestinationdetails?.title}{" "}
                   </h5>
                 </div>
 
                 <div className="col-lg-6 col-md-6 col-12">
-                  <h3 className="margin-left"> Details of {currentpopulardestinationdetails.countryName } </h3>
-                  <p>{currentpopulardestinationdetails.dicription}</p>
+                  <h3 className="margin-left"> Details of {currentpopulardestinationdetails.title } </h3>
+                  <p>{currentpopulardestinationdetails.discription}</p>
                 </div>
               </div>
             </div>

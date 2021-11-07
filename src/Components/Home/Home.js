@@ -2,7 +2,7 @@ import React from "react";
 import About from "../About/About";
 import Events from "../Events/Events";
 import HeaderBanner from "../HeaderBanner/HeaderBanner";
-import PopularDestinations from "../PopularDestinations/PopularDestinations";
+import PopularDestination from "../PopularDestination/PopularDestination";
 import Vedio from "../Vedio/Vedio";
 import WhyChoseus from "../WhyChoseUS/WhyChoseus";
 
@@ -11,16 +11,13 @@ const Home = () => {
     <div>
       <HeaderBanner></HeaderBanner>
       <About></About>
-    
-    <Events> </Events>
-      {/* <PopularDestinations></PopularDestinations> */}
+
+      <Events> </Events>
       <WhyChoseus></WhyChoseus>
 
       <Vedio></Vedio>
 
-
-      <PopularDestinations></PopularDestinations>
-
+      <PopularDestination></PopularDestination>
     </div>
   );
 };

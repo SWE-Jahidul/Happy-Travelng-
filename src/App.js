@@ -14,60 +14,70 @@ import EventsDetails from "./Components/EventsDetails/EventsDetails";
 import AuthProvider from "./Components/context/AuthProvider";
 import ManageOrder from "./Components/ManageOrder/ManageOrder";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import AddPopularDEstination from "./Components/AddPopularDestination/AddPopularDEstination";
+import PopularDestination from "./Components/PopularDestination/PopularDestination";
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
-      <Router>
-        <Navbar> </Navbar>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
+        <Router>
+          <Navbar> </Navbar>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
 
-          <Route path="/home">
-            <Home></Home>
-          </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
 
-          <Route path="/about">
-            <About></About>
-          </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
 
-          <Route path="/blogs">
-            <Blogs></Blogs>
-          </Route>
-          <Route path="/events">
-            <Events></Events>
-          </Route>
+            <Route path="/blogs">
+              <Blogs></Blogs>
+            </Route>
+            <Route path="/events">
+              <Events></Events>
+            </Route>
 
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
 
-          <Route path="/addevents">
-            <AddEvents></AddEvents>
-          </Route>
+            <Route path="/popularDestinationusers">
+              <PopularDestination></PopularDestination>
+            </Route>
+            
+            <Route path="/adddestination">
+              <AddPopularDEstination></AddPopularDEstination>
+            </Route>
 
-          <Route path="/populardestinationdetails/:destinationId">
-            <PopularDestinationDetails></PopularDestinationDetails>
-          </Route>
+            <Route path="/addevents">
+              <AddEvents></AddEvents>
+            </Route>
 
-          <PrivateRoute path="/eventdetails/:eventId">
-            <EventsDetails></EventsDetails>
-          </PrivateRoute>
+            <PrivateRoute path="/populardestinationdetails/:destinationId">
+              <PopularDestinationDetails></PopularDestinationDetails>
+            </PrivateRoute>
 
-          <Route path="/manageorder">
-            <ManageOrder></ManageOrder>
-          </Route>
+            <PrivateRoute path="/eventdetails/:eventId">
+              <EventsDetails></EventsDetails>
+            </PrivateRoute>
 
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-        </Switch>
+            <Route path="/manageorder">
+              <ManageOrder></ManageOrder>
+            </Route>
 
-        <Footer></Footer>
-      </Router>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+          </Switch>
+
+          <Footer></Footer>
+        </Router>
       </AuthProvider>
     </div>
   );
