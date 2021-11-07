@@ -7,9 +7,11 @@ const Navbar = () => {
   console.log("my new user", users);
   return (
     <nav className="container navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
-        Happy Traveling{" "}
-      </a>
+      <h1>
+        <a className="navbar-brand" href="#">
+          Happy Traveling{" "}
+        </a>
+      </h1>
       <button
         className="navbar-toggler"
         type="button"
@@ -39,6 +41,20 @@ const Navbar = () => {
               Blogs
             </Link>
           </li>
+
+          <li className="nav-item ">
+            <Link to="/manageorder" className="nav-link menu-link">
+              Manage Order
+            </Link>
+          </li>
+
+
+          <li className="nav-item ">
+            <Link to="/myorder" className="nav-link menu-link">
+              My Order
+            </Link>
+          </li>
+
           <li className="nav-item">
             <Link to="/about" className="nav-link menu-link">
               About

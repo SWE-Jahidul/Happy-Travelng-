@@ -16,30 +16,39 @@ const PopularDestination = () => {
   }, []);
 
   return (
-    <div className="row container">
-      {populardestination?.map((pds) => (
-        <div className="col-md-4 py-4">
-          <div className="card rounded-3">
-            <img className="card-img-top" src={pds.thabnil} alt="Card image" />
-            <div className="card-img-overlay">
-              <Link to={`/populardestinationdetails/${pds._id}`}>
-                <h4
-                  className="float-left text-white"
-                  style={{
-                    position: "absolute",
-                    bottom: "8px",
-                    left: "16px",
-                    fontSize: "18px",
-                  }}
-                >
-                  {pds.title}
-                </h4>
-              </Link>
+    <>
+      <div className="container">
+        <div className=" row">
+          <h1>Popular Destination </h1>
+          {populardestination?.map((pds) => (
+            <div className="col-lg-4 col-md-4 col-12 py-4">
+              <div className="card rounded-3">
+                <img
+                  className="card-img-top"
+                  src={pds.thabnil}
+                  alt="Card image"
+                />
+                <div className="card-img-overlay">
+                  <Link to={`/populardestinationdetails/${pds._id}`}>
+                    <h4
+                      className="float-left text-white"
+                      style={{
+                        position: "absolute",
+                        bottom: "8px",
+                        left: "16px",
+                        fontSize: "18px",
+                      }}
+                    >
+                      {pds.title}
+                    </h4>
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -16,6 +16,10 @@ import ManageOrder from "./Components/ManageOrder/ManageOrder";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import AddPopularDEstination from "./Components/AddPopularDestination/AddPopularDEstination";
 import PopularDestination from "./Components/PopularDestination/PopularDestination";
+import NotFound from "./Components/NotFound/NotFound";
+import MyOrder from "./Components/MyOrder/MyOrder";
+
+
 
 function App() {
   return (
@@ -50,7 +54,7 @@ function App() {
             <Route path="/popularDestinationusers">
               <PopularDestination></PopularDestination>
             </Route>
-            
+
             <Route path="/adddestination">
               <AddPopularDEstination></AddPopularDEstination>
             </Route>
@@ -70,9 +74,20 @@ function App() {
             <Route path="/manageorder">
               <ManageOrder></ManageOrder>
             </Route>
+            <Route path="/myorder">
+              <MyOrder></MyOrder>
+            </Route>
+          
+           
+           
+           
 
             <Route path="/login">
               <Login></Login>
+            </Route>
+
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
 

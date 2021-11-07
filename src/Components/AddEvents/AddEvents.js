@@ -25,7 +25,7 @@ const AddEvents = () => {
   };
 
   const handleDetailsOfPlace = (e) => {
-    setAboutPlace(e.taget.value);
+    setAboutPlace(e.target.value);
   };
   const handelevent = () => {
     const data = { title, discription, payment, thabnil, aboutplace };
@@ -39,7 +39,7 @@ const AddEvents = () => {
       .then((result) => console.log(result));
   };
 
-  console.log(title);
+  console.log(title);  
   return (
     <div>
       <div>

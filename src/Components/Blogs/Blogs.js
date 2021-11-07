@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Blogs = () => {
-    return (
-        <div>
-             
-             i am blogs 
-        </div>
-    );
+  return (
+    <div className="py-5">
+      <h1> Blogs Coming Soon </h1>
+    </div>
+  );
 };
 
 export default Blogs;

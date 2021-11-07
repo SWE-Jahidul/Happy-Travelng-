@@ -1,8 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Contact.css";
 
 const Contact = () => {
+  const [messages, setMessages] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+
+  const handelMessages = (e) => {
+    setMessages(e.target.value);
+  };
+
+  const hadelname = (e) => {
+    setName(e.target.value);
+  };
+
+  const handelemail = (e) => {
+    setEmail(e.target.email);
+  };
+
+  const handelSubject = (e) => {
+    setSubject(e.target.subject);
+  };
+
+
+  const handelsentdata = () =>{
+    const data = { messages, name, email, subject };
+
+
+    fetch("http://localhost:5000/usergetintouch", {
+      method: "POST",
+      headers: { "content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
+  };
+  
   return (
     <div className="row p-5 d-flex align-items-center">
       <h1 className="p-3"> Contact Us </h1>
@@ -13,6 +48,7 @@ const Contact = () => {
           <textarea
             class="form-control"
             placeholder="Enter Messages"
+            onChange={handelMessages}
             id="exampleFormControlTextarea1"
             rows="3"
           ></textarea>
@@ -22,21 +58,28 @@ const Contact = () => {
               <input
                 type="text"
                 class="form-control"
+                onChange={hadelname}
                 placeholder="Enter Name "
               />
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Enter Email" />
+              <input
+                type="text"
+                class="form-control"
+                onChange={handelemail}
+                placeholder="Enter Email"
+              />
             </div>
           </div>
 
           <input
             type="text"
             className="my-3 form-control"
+            onChange={handelSubject}
             placeholder="Enter Subject"
           />
           <div className="getintouchtitle py-2">
-            <button type="button" class="btn btn-primary btn-lg w-25">
+            <button type="button" onChange={handelsentdata} class="btn btn-primary btn-lg w-25">
               SEND
             </button>
           </div>
